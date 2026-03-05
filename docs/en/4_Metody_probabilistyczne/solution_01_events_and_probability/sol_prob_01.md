@@ -1,11 +1,3 @@
-The problem comes from **inline `$$ ... $$` math inside text lines**.
-GitHub Markdown (and many mkdocs renderers) often breaks when `$$` is mixed with text in the same line. Display math should be on **separate lines with empty lines around it**.
-
-Below is a **clean GitHub-safe Markdown version** that will render correctly.
-
----
-
-```markdown
 # Problem 1
 
 ## Short theory (sets as events)
@@ -188,16 +180,3 @@ $$
 $$
 A \setminus B = \{\omega_1,\omega_5\}
 $$
-```
-
----
-
-✅ **Why this will render correctly**
-
-* No `$$` inside text lines
-* Empty line **before and after** every display formula
-* Works with **GitHub, mkdocs-material, and KaTeX/MathJax**
-
----
-
-If you want, I can also show you **3 small Markdown rules that prevent 95% of LaTeX rendering bugs on GitHub** (very useful for your repo with physics/math problems).
